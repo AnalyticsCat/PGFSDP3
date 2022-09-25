@@ -48,6 +48,18 @@ public class CacheConfiguration {
             createCache(cm, com.ctme.sportyshoes.domain.User.class.getName());
             createCache(cm, com.ctme.sportyshoes.domain.Authority.class.getName());
             createCache(cm, com.ctme.sportyshoes.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.ctme.sportyshoes.domain.Product.class.getName());
+            createCache(cm, com.ctme.sportyshoes.domain.ProductCategory.class.getName());
+            createCache(cm, com.ctme.sportyshoes.domain.ProductCategory.class.getName() + ".products");
+            createCache(cm, com.ctme.sportyshoes.domain.Customer.class.getName());
+            createCache(cm, com.ctme.sportyshoes.domain.Customer.class.getName() + ".orders");
+            createCache(cm, com.ctme.sportyshoes.domain.ProductOrder.class.getName());
+            createCache(cm, com.ctme.sportyshoes.domain.ProductOrder.class.getName() + ".orderItems");
+            createCache(cm, com.ctme.sportyshoes.domain.ProductOrder.class.getName() + ".invoices");
+            createCache(cm, com.ctme.sportyshoes.domain.OrderItem.class.getName());
+            createCache(cm, com.ctme.sportyshoes.domain.Invoice.class.getName());
+            createCache(cm, com.ctme.sportyshoes.domain.Invoice.class.getName() + ".shipments");
+            createCache(cm, com.ctme.sportyshoes.domain.Shipment.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

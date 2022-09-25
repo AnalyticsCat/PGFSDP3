@@ -1,0 +1,13 @@
+import { IProductCategory } from 'app/entities/product-category/product-category.model';
+
+export interface IProduct {
+  id: number;
+  name?: string | null;
+  description?: string | null;
+  price?: number | null;
+  image?: string | null;
+  imageContentType?: string | null;
+  productCategory?: Pick<IProductCategory, 'id'> | null;
+}
+
+export type NewProduct = Omit<IProduct, 'id'> & { id: null };
